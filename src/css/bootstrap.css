@@ -3918,6 +3918,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-width: 1px 0 0;
 }
 .navbar-brand {
+  font-family: 'Oswald', Arial, helvetica, sans-serif;
+  text-transform: uppercase;
   float: left;
   padding: 24.5px 15px;
   font-size: 18px;
