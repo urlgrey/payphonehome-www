@@ -1,5 +1,5 @@
-# config valid only for Capistrano 3.1
-lock '3.2.1'
+# config valid only for Capistrano 3.3.5
+lock '3.3.5'
 
 set :application, 'payphonehome-www'
 set :organization, 'urlgrey'
@@ -43,7 +43,7 @@ namespace :deploy do
   desc 'Prepare host for application'
   task :cold do
     on roles(:util) do
-      execute "if [[ ! -d /opt/#{fetch(:application)} ]]; then sudo mkdir -p /opt/#{fetch(:application)}; sudo mkdir -p /opt/#{fetch(:application)}/shared/log; sudo mkdir /opt/#{fetch(:application)}/releases; sudo chown -R deploy.deploy /opt/#{fetch(:application)}; fi"
+      execute "if [[ ! -d /opt/#{fetch(:application)} ]]; then sudo mkdir -p /opt/#{fetch(:application)}; sudo mkdir -p /opt/#{fetch(:application)}/shared/log; sudo mkdir /opt/#{fetch(:application)}/releases; sudo chown -R ec2-user.ec2-user /opt/#{fetch(:application)}; fi"
     end
   end
 end
